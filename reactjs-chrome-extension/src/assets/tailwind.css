@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    border-radius: 20px;
+    height: max-content;
+    width: 200px;
+}

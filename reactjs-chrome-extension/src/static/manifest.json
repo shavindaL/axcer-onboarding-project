@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "minimum_chrome_version": "116",
+    "name": "AI Screen Reader",
+    "description": "Select a text and ask questions about it",
+    "version": "1.0.0",
+    "action": {
+        "default_title": "React Boilerplate",
+        "default_icon": "icons/microphone-100.png"
+    },
+    "permissions": [
+        "tts"
+    ],
+    "icons": {
+        "16": "icons/mic.svg",
+        "64": "icons/mic-64.png",
+        "128": "icons/mic-128.png"
+    },
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/mic-16.png",
+                "icons/mic-64.png",
+                "icons/mic-128.png",
+                "icons/mic.svg",
+                "icons/x-solid.svg",
+                "icons/microphone-100.png",
+                "icons/microphone-50.png",
+                "icons/mute-unmute-50/png",
+                "icons/mute-unmute-100/png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
